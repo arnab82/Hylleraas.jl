@@ -1,12 +1,12 @@
-
+using DoubleFloats
 struct basis
-    Z::BigInt# we will be only studying He atom
-    n::BigInt
-    l::BigInt
-    m::BigInt
-    alpha::BigFloat
-    beta::BigFloat
-    gamma::BigFloat
+    Z::Int128# we will be only studying He atom
+    n::Int128
+    l::Int128
+    m::Int128
+    alpha::Double64
+    beta::Double64
+    gamma::Double64
 end
 
 function test_basis()
@@ -20,7 +20,7 @@ function test_basis()
     return test_basis
 end
 
-function lambda_N(N::BigInt, alpha::BigFloat, gamma::BigFloat)
+function lambda_N(N::Int128, alpha::Double64, gamma::Double64)
     lambda_n = basis[]
     for n in 0:N
         for l in 0:N-n

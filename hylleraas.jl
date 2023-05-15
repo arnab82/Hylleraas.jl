@@ -5,11 +5,10 @@ include("./eigen_solver.jl")
 #function main(argv)
 	setprecision(15)
 
-	alpha = BigFloat(3.6)  # actually 2 * 1.8
-	gamma = BigFloat(0.0)
-
+	alpha = Double64(3.6)  # actually 2 * 1.8
+	gamma = Double64(0.0)
 	println("N\tbasis size\tenergy (Eh)")
-	for N=BigInt(0):BigInt(13)
+	for N=Int128(0):Int128(13)
     		b_set = lambda_N(N,alpha,gamma)
     		S = compute_integral(b_set, S_ij)
     		Vne = compute_integral(b_set, Vne_ij)
