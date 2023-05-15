@@ -1,5 +1,5 @@
 #using hylleraas
-include("./../hylleraas.jl")
+include("./../src/hylleraas.jl")
 using Test
 
 @testset "hylleraas.jl" begin
