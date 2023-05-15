@@ -1,7 +1,7 @@
-using Hyllerus
+#using hylleraas
+include("./../hylleraas.jl")
 using Test
 
-@testset "YourPackageName.jl" begin
-    @test Hyllerus.greet_your_package_name() == "Hello hyllerus!"
-    @test Hyllerus.greet_your_package_name() != "Hello world!"
+@testset "hylleraas.jl" begin
+    @test hylleraas.main() == -2.90372420
 end
